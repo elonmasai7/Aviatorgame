@@ -1,0 +1,11 @@
+from square.client import Client
+
+square_client = Client(
+  access_token='your_access_token',
+  environment='sandbox',  # or 'production'
+)
+
+result = square_client.payments.create(
+  source_id='your_source_id',
+  amount_money={'amount': 1000, 'currency': 'USD'},
+)
