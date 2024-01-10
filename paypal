@@ -1,0 +1,9 @@
+from paypalrestsdk import Payment
+
+paypal_payment = Payment({
+  "intent": "sale",
+  "payer": {
+    "payment_method": "paypal"
+  },
+  # Additional payment details
+})
