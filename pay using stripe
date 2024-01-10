@@ -1,0 +1,9 @@
+import stripe
+
+stripe.api_key = 'your_secret_key'
+
+payment_intent = stripe.PaymentIntent.create(
+  amount=1000,
+  currency='usd',
+  payment_method_types=['card'],
+)
