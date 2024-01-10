@@ -1,0 +1,6 @@
+from braintree import Transaction, Customer, CreditCard
+
+result = Transaction.sale({
+    "amount": "1000.00",
+    "payment_method_nonce": "your_payment_method_nonce",
+})
